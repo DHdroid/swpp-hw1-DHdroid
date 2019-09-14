@@ -48,7 +48,7 @@ class Form {
       return pattern.test(this.lname);
     }
     test_age() {
-      var pattern = new RegExp(/^\d{1,3}$/);
+      var pattern = new RegExp(/^\d+$/);
       return pattern.test(this.age) && Number(this.age)>=0 && Number(this.age)<=200;
     }
     test_birth_month() {
@@ -61,17 +61,17 @@ class Form {
       return well_formed;
     }
     test_birth_day() {
-      var pattern = new RegExp(/^\d{1,2}$/);
-      return pattern.test(this.birth_day);
+      var pattern = new RegExp(/^\d+$/);
+      return pattern.test(this.birth_day) && Number(this.birth_day)>=0 && Number(this.birth_day)<=99;
     }
     test_birth_year() {
-      var pattern = new RegExp(/^\d{4}$/);
+      var pattern = new RegExp(/^\d+$/);
       return pattern.test(this.birth_year) && Number(this.birth_year) >= 1800 && Number(this.birth_year) <= 2018;
     }
   }
 
   var but = document.createElement('button');
-  but.innerHTML = "Checks";
+  but.innerHTML = "Check";
   but.onclick = function() {
       var email = document.forms["form"]["email"].value;
       var password = document.forms["form"]["password"].value;

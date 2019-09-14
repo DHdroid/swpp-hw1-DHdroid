@@ -200,7 +200,7 @@ class Form {
       if(well_formed)
         alertMessage = "Successfully Submitted!";
       else
-        alertMessage = "You must correst:\n"+alertMessage
+        alertMessage = "You must correct:\n"+alertMessage
       // TODO: Fill the alert message according to the validation result by following the form in README.md.
       alert(alertMessage);
 

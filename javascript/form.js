@@ -23,7 +23,7 @@ class Form {
     }
     // TODO: You may fill in functions in the class.
     test_email(){
-      var pattern = new RegExp(/^[^@\s]+@[^@\s.]+.[a-zA-Z]{2,3}$/);
+      var pattern = new RegExp(/^[^@\s]+@[^@\s.]+\.[a-zA-Z]{2,3}$/);
       return pattern.test(this.email);
     }
     test_password() {
